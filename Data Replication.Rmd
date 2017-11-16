@@ -4,6 +4,7 @@ author: "Dani Antos"
 date: "October 30, 2017"
 output: html_document
 ---
+
 ```{r loading gender data into r}
 library(curl)
 f <- curl("https://raw.githubusercontent.com/dantos17/AN597-Notes/master/Gender.txt")
@@ -11,7 +12,6 @@ d <- read.table(f, header = TRUE, sep = "\t", stringsAsFactors = FALSE)
 head(d)
 #I GOT ITTTTTTTTT
 ```
-[whatever they said](http://...link) to create hyperlink
 
 ```{r reference genesets}
 library(dslice)
@@ -20,11 +20,6 @@ blah2$gene_symbol #This works, but which one do I want? if any?
 #this isn't working
 names(blah2)
 c2 <- load_gmt("c2.symbols.gmt")
-c2
-names(c2)
-c2$set_name
-p53_c2 <- load_gmt("P53_C2.all.leading.genes.WT.gmt")
-names(p53_c2)
 names(c2)
 df <- as.data.frame(blah2)
 df$gene_symbol #this isn't working, it says there are different numbers of rows so I can't make a dataframe
